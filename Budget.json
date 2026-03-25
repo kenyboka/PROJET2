@@ -1,0 +1,42 @@
+{
+    "budget": [
+        {
+            "categorie": "Logement",
+            "limite": 1250
+        },
+        {
+            "categorie": "Hydro",
+            "limite": 170
+        },
+        {
+            "categorie": "Épicerie",
+            "limite": 500
+        },
+        {
+            "categorie": "Communication",
+            "limite": 100
+        },
+        {
+            "categorie": "Carburant",
+            "limite": 200
+        },
+        {
+            "categorie": "Assurance",
+            "limite": 200
+        },
+        {
+            "categorie": "Garderie",
+            "limite": 300
+        },
+        {
+            "categorie": "Loisir",
+            "limite": 500
+        },
+        {
+            "categorie": "Imprévus",
+            "limite": 500
+        }
+    ],
+    "devise": "CAD",
+    "mois": "Janvier"
+}
