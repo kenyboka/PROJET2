@@ -18,8 +18,8 @@ def ecrire_rapport(chemin, mois, devise,total, comparaison):
     """
     ecrire le rapport dans un fichier texte.
     """
-    whith open chemin, "w" as r:
-    
+    with open (chemin, "w") as r:
+
         r.write(f"le rapport du mois de {mois}")
         r.write(f"le total des depenses est : {total} {devise}")
         r.write(f"Categorie / Depense / limite / etat")
