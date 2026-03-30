@@ -3,44 +3,33 @@ Gestion de budget
 Auteur: Joseph Boka
 """
 import csv 
+import json
  
-def lire_liste_depense(chemin):
+def lire_csv(chemin):
     """
-    lire un fichier CSV
-    afficher chaque dépense
-    calculer le total
+    lire un fichier CSV contenant les dépenses
+    chemin du fichier CSV
+    ditionnaire {categorie: montant}
     """
     Liste_depenses = {}
     try:
-        fichier = open(chemin, "r")
-        lecteur = csv.DictReader(fichier)
-        print(lecteur.fieldnames)
+
+        with open(chemin, "r") as fichier:
+            lecteur = csv.DictReader(fichier)
 
         # Lire chaque ligne du CSV
     
         for ligne in lecteur:
-            description = ligne["description"]
+            categorie = ligne["description"]
             montant = float(ligne["montant"])
-            Liste_depenses[description] = montant
+            Liste_depenses[categorie] =  Liste_depenses.get(categorie, 0) + montant
 
-        fichier.close()
-
-        # Affichage des dépenses
-        for element in Liste_depenses:
-            print(f"{element} : {Liste_depenses[element]}$")
-
-        # Calcul du total
-        Total = 0
-        for montant in Liste_depenses.values():
-            Total += montant
-
-        print(f"\nMontant total : {Total}$")
 
     except FileNotFoundError:
         print("Erreur : fichier introuvable")
+    except ValueError:
+        print("erreur : montant invalide dans le CSV")
 
     return Liste_depenses
 
-chemin = "Liste_depenses.csv"
-lire_liste_depense(chemin)
 
