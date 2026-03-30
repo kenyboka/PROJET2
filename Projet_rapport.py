@@ -20,10 +20,11 @@ def ecrire_rapport(chemin, mois, devise,total, comparaison):
     """
     with open (chemin, "w") as r:
 
-        r.write(f"le rapport du mois de {mois}")
-        r.write(f"le total des depenses est : {total} {devise}")
-        r.write(f"Categorie / Depense / limite / etat")
+        r.write(f"\nle rapport du mois de {mois}")
+        r.write(f"\nle total des depenses est : {total} {devise}")
+        r.write(f"\nCategorie / Depense / limite / etat")
     
         for categorie, montant, limite, etat in comparaison:
-            r.write(f"{categorie} / {montant} / {limite} / {etat}")
-    
+            r.write(f"\n{categorie} / {montant} / {limite} / {etat}")
+            ligne = "-" * 50
+            r.write(ligne + "\n")
