@@ -1,5 +1,6 @@
 """
-
+rapport.py
+Analyser les dépenses et ecrire le rapport dans un fichier
 """
 def analyser(depenses, budget_json):
     resultats = []
