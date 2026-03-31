@@ -8,12 +8,13 @@ def analyser(depenses, budget_json):
     for categorie, montant in depenses.items():
         limite = limites.get(categorie)
         if limite is None:
-            etat = "catehorie inconnue"
+            etat = "categorie inconnue"
         elif montant > limite:
             etat = "dépassé"
         else: etat = "excellent"
         resultats.append((categorie, montant, limite,etat))
     return resultats
+
 
 def ecrire_rapport(chemin, mois, devise,total, comparaison):
     """
