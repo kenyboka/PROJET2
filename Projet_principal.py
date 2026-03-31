@@ -1,0 +1,18 @@
+from Projet_lecture import lire_csv, lire_json
+from Projet_rapport import analyser, ecrire_rapport
+
+def principal():
+    chemin_csv = "data/depenses.csv"
+    chemin_json = "data/budget.json"
+    chemin_sortie = "output/rapport.txt"
+
+    depenses = lire_csv(chemin_csv)
+    budget = lire_json(chemin_json)
+
+    comparaison = analyser(depenses, budget)
+
+    total = sum(depenses.values())
+    mois = "Mars"
+    devise = "$"
+
+    
