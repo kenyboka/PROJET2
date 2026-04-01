@@ -5,7 +5,10 @@ Analyser les dépenses et ecrire le rapport dans un fichier
 """
 def analyser(depenses, budget_json):
     """
-    analyser les dépenses
+    But: analyser les dépenses et les comparer avec les dépenses par cathégorie et les limites du budget
+    Entrée: depenses par catégorie 
+            données JSON contenant les limites de budget
+    sortie: aucune
     """
     resultats = []
     data = budget_json.get("budget", [])
@@ -23,7 +26,9 @@ def analyser(depenses, budget_json):
 
 def ecrire_rapport(chemin, mois, devise,total, comparaison):
     """
-    ecrire le rapport dans un fichier texte.
+    But: écrire le rapport dans un fichier texte.
+    entrées: (chemin, mois, devise,total, comparaison)
+    Sortie: aucun 
     """
     with open (chemin, "w") as B:
 
