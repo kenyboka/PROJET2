@@ -8,7 +8,7 @@ import json
  
 def lire_csv(chemin):
     """
-    but :lire un fichier CSV contenant les dépenses
+    but : lire un fichier CSV contenant les dépenses
     entre : chemin vers le csv
     sortie : aucune
     """
