@@ -1,13 +1,17 @@
 """
 Projet : Gestion de budget
 Auteur : Joseph Boka
-Description : Programme principal qui excécute la lecture, l’analyse et écrire du rapport.
+Description : Programme principal qui excécute la lecture, l'analyse et écrire du rapport.
 """
 from Projet_lecture import lire_csv, lire_json
 from Projet_rapport import analyser, ecrire_rapport
 
 def principal():
-    
+    """
+    Programme principal qui excécute la lecture, l'analyse et écrire du rapport
+    Entrées: les chemins csv et json
+    Sortie: le rapport en fichier text
+    """
 
     chemin_csv = "data/liste_depenses.csv"
     chemin_json = "data/budget.json"
