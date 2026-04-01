@@ -1,13 +1,16 @@
 """
 Gestion de budget
 Auteur: Joseph Boka
+Description : Programme pour lire les fichiers CSV et JSON.
 """
 import csv 
 import json
  
 def lire_csv(chemin):
     """
-    lire un fichier CSV contenant les dépenses
+    but :lire un fichier CSV contenant les dépenses
+    entre : chemin vers le csv
+    sortie : aucune
     """
     Liste_depenses = {}
     try:
@@ -18,14 +21,14 @@ def lire_csv(chemin):
             entetes = lignes[0].strip().split(",")
             index_description = entetes.index("description")
             index_montant = entetes.index("montant")
-            print(entetes)
+            
 
         # Lire chaque ligne du CSV
-            for ligne in lignes[1:]:
-            #print("Ligne brute :", repr(ligne))
+        for ligne in lignes[1:]:
+            print("Ligne brute :", repr(ligne))
 
-                elements = ligne.strip().split(",")
-            #print("Éléments :", elements)
+            elements = ligne.strip().split(",")
+            print("Éléments :", elements)
 
             categorie = elements[index_description].strip()
             montant = float(elements[index_montant].strip())
@@ -42,7 +45,9 @@ def lire_csv(chemin):
 
 def lire_json(chemin):
     """
-    lire un fichier JSON contenant le budget.
+    But: lire un fichier JSON contenant le budget.
+    Entrée: chemin json
+    Sortie: aucune
     """
     try: 
         with open(chemin, "r") as f:
