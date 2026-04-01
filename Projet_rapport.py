@@ -4,7 +4,8 @@ Analyser les dépenses et ecrire le rapport dans un fichier
 """
 def analyser(depenses, budget_json):
     resultats = []
-    limites = {item["categorie"]: item["limite"] for item in budget_json["budget"]}
+    data = budget_json.get("budget", [])
+    limites = {item["categorie"]: item["limite"] for item in data}
     for categorie, montant in depenses.items():
         limite = limites.get(categorie)
         if limite is None:
