@@ -13,13 +13,23 @@ def lire_csv(chemin):
     try:
 
         with open(chemin, "r") as fichier:
-            lecteur = csv.DictReader(fichier)
+            lignes = fichier.readlines()
+
+            entetes = lignes[0].strip().split(",")
+            index_description = entetes.index("description")
+            index_montant = entetes.index("montant")
+            print(entetes)
 
         # Lire chaque ligne du CSV
-    
-        for ligne in lecteur:
-            categorie = ligne["description"]
-            montant = float(ligne["montant"])
+            for ligne in lignes[1:]:
+            #print("Ligne brute :", repr(ligne))
+
+                elements = ligne.strip().split(",")
+            #print("Éléments :", elements)
+
+            categorie = elements[index_description].strip()
+            montant = float(elements[index_montant].strip())
+            
             Liste_depenses[categorie] =  Liste_depenses.get(categorie, 0) + montant
 
 
