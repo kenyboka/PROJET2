@@ -19,7 +19,7 @@ def lire_csv(chemin):
     
         for ligne in lecteur:
             categorie = ligne["description"]
-            montant = (ligne["montant"])
+            montant = float(ligne["montant"])
             Liste_depenses[categorie] =  Liste_depenses.get(categorie, 0) + montant
 
 
