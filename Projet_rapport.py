@@ -1,8 +1,12 @@
 """
-rapport.py
+Projet : Gestion de budget
+Auteur : Joseph Boka
 Analyser les dépenses et ecrire le rapport dans un fichier
 """
 def analyser(depenses, budget_json):
+    """
+    analyser les dépenses
+    """
     resultats = []
     data = budget_json.get("budget", [])
     limites = {item["categorie"]: item["limite"] for item in data}
