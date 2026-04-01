@@ -2,7 +2,7 @@ from Projet_lecture import lire_csv, lire_json
 from Projet_rapport import analyser, ecrire_rapport
 
 def principal():
-    chemin_csv = "data/depenses.csv"
+    chemin_csv = "data/liste_depenses.csv"
     chemin_json = "data/budget.json"
     chemin_sortie = "output/rapport.txt"
 
@@ -18,5 +18,5 @@ def principal():
     ecrire_rapport(chemin_sortie, mois, devise, total, comparaison)
 
 
-if __name__ == "__projet_principal__":
-    projet_principal() 
+if __name__ == "__main__":
+    principal() 
