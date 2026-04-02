@@ -8,7 +8,7 @@ from Projet_rapport import analyser, ecrire_rapport
 
 def principal():
     """
-    Programme principal qui excécute la lecture, l'analyse et écrire du rapport
+    But: Programme principal qui excécute la lecture, l'analyse et écrire du rapport
     Entrées: les chemins csv et json
     Sortie: le rapport en fichier text
     """
