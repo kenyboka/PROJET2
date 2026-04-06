@@ -56,6 +56,6 @@ def lire_json(chemin):
         print("erreur : fichier JSON introuvable.")
         return {}
     except json.JSONDecodeError:
-        print("erreur : JSON mal formé."
+        print("erreur : JSON mal formé.")
         return {}
 
