@@ -38,5 +38,4 @@ def ecrire_rapport(chemin, mois, devise,total, comparaison):
     
         for categorie, montant, limite, etat in comparaison:
             B.write(f"\n{categorie} / {montant} / {limite} / {etat}")
-            ligne = "-" * 50
-            B.write(ligne + "\n")
+            
