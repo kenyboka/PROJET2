@@ -26,7 +26,7 @@ def principal():
     mois = "Mars"
     devise = "$"
 
-    ecrire_rapport(chemin_sortie, mois, devise, total, comparaison
+    ecrire_rapport(chemin_sortie, mois, devise, total, comparaison)
 
 
 if __name__ == "__main__":
