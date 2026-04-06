@@ -1,57 +1,66 @@
-## Utilisateur
+# Resumé du projet
+Le programme automatise la gestion d'un budget mensuel.
+Le programme lit les dépenses par catégorie,
+compare chaque montant à la limite définie dans le budget JSON puis indique si la catégorie est excellente, dépassée ou inconnue. Le programme calcul le total des dépenses et écrit un rapport complet.
+
 # Fonctionnalité
 - Lecture de fichier CSV.
 - Lecture de fichier json contenant les limites de budget.
 - Analyse automatique des dépenses par catégorie.
 - Générer un rapport texte.
-- 
+  
 # Limitations
 - Les catégories doivent exister dans le fichier JSON car une catégorie absente sera marquée comme inconnue
 - Le programme ne vérifie pas la cohérence des données entre CSV et JSON
 - Le rapport généré est uniquement en format texte (.txt)
 - le programme est sensible à la casse
 - le programme ne gère pas les budgets mensuels multiples
+  
 # Installation
-- Installation python
-- Télécharger les fichiers
+- 1- **Installation python**
+- 2- **Télécharger les fichiers**
 - Projet_principal.py
 - Projet_lecture.py
 - Projet_rapport.py
+- 3- **Vérifier la présence des dossiers:**
+- data/ contient liste_depenses.csv et budget.json
+- output/ qui doit recevoir rapport
+  
 # FAQ
-**Le programme ne se lance pas que faire?**
+## Le programme ne se lance pas que faire?
   
 - Vérifie que Python 3.10+ est bien installé.
 - Assure-toi d'exécuter le programme dépuis le bon dossier.
 - Vérifie que les fichiers liste_depenses.csv et budget.josn sont bien dans le dossier (data). 
 
-**Le programme dit que le fichier CSV ou JSON est introuvable**
+## Le programme dit que le fichier CSV ou JSON est introuvable
 
 - Vérifie l'orthographe exacte des noms de fichiers
 - Vérifie que la structure des dossiers est respectée
 
-**Le programme affiche "montant invalide dans le CSV**
+## Le programme affiche "montant invalide dans le CSV
 
 - Vérifie qu'il n'y a pas de texte, symbole ou cellule vide dans les colonnes
 - Assure-toi que les montants utilisent un point (.) comme séparateur décimal.
 
-**Le rapport généré est vide ou incomplet**
+## Le rapport généré est vide ou incomplet
 
 - vérifie que le CSV contient bien des lignes après les en-têtes.
 - Vérifie que les catégories du CSV correspondent à celle du JSON
 - Assure toi que la fonction *analyse()* reçoit bien les données
 
-**Le programme plante sans message claire.**
+## Le programme plante sans message claire.
 
 - verifie les indentations dans le fichier python
 - Vérifie également le chemin de fichier 
 
-**Puis-je ajoter de nouvelles catégories?**
+## Puis-je ajoter de nouvelles catégories?
 
 Oui
 - Ajoute la catégorie dans le CSV.
 - Ajoute la limite correspondante dans le JSON et le programme les analysera automatiquement
 
-**Comment réinitialiser dans le projet si tout est cassé?**
+## Comment réinitialiser dans le projet si tout est cassé?
 - Supprime le fichier *rapport.txt*
 - Remets les fichiers CSV et JSON d'origine.
 - Relance *Projet_principal.py*
@@ -59,17 +68,11 @@ Oui
 # Communauté
 - etudiant du Cegep
   
-# Table des matières
-###
 
 # Utilisation
 - Executer seulement le fichier *Projet_principal.py*
 - le programme lit, analyse et génère un rapport dans le dossier *output/rapport.txt*
 
-# Resumé du projet
-Le programme automatise la gestion d'un budget mensuel.
-Le programme lit les dépenses par catégorie,
-compare chaque montant à la limite définie dans le budget JSON puis indique si la catégorie est excellente, dépassée ou inconnue. Le programme calcul le total des dépenses et écrit un rapport complet.
 
 # Example
 
@@ -84,16 +87,13 @@ Communication / 100.0 / 100 / excellent------------
 # Sreenshot
 ![alt text](image.png)
 
-## Programmeur
+# Programmeur
 
-# Créer son environnement de developpement
+## Créer son environnement de developpement
 - Installer Python
 - Utiliser VS code
 - Activer l'extension Python
 - Organiser les fichiers dans une structure claire (data/, output/, modules Python)
-
-
-# Lien vers ressource 
 
 # Comment régler des problèmes
 - Si le programme plante: Vérifier les indentations
